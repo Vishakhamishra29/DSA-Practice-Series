@@ -9,24 +9,12 @@
 // Date: 5 Nov 2025
 // Author: Vishakha Mishra
 
-import java.util.Scanner;
+import java.util.Arrays;
 
 public class Find_Max_Min {
     public static void main(String[] args) {
         int arr[]={10,33,22,44,55,66};
         int n=arr.length;
-        // Scanner sc = new Scanner(System.in);
-
-        // Input array size
-        // System.out.print("Enter number of elements: ");
-        // int n = sc.nextInt();
-
-        // int[] arr = new int[n];
-        // System.out.println("Enter array elements: ");
-        // for (int i = 0; i < n; i++) {
-        //     arr[i] = sc.nextInt();
-        // }
-
         // Initialize min and max
         int min = arr[0];
         int max = arr[0];
@@ -45,6 +33,11 @@ public class Find_Max_Min {
         System.out.println("Minimum element: " + min);
         System.out.println("Maximum element: " + max);
 
-        // sc.close();
-    }
+        // Copying of Array
+        int [] copy=Arrays.copyOf(arr, n);
+        System.out.println("Copy Arrays : " + Arrays.toString(copy));
+        System.out.println(arr[0]);
+        arr[0]=100;
+        System.out.println(arr[0]);
+ }
 }
